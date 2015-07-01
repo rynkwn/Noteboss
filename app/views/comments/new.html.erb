@@ -1,0 +1,10 @@
+<h1>Okay (Boss == Box)</h1>
+
+<%= link_to "Leave the Box", root_path %>
+
+<%= form_for :comment do |f| %>
+    <%= f.label :note %>
+    <%= f.text_field :note %>
+    
+    <%= f.submit 'Submit Note', class: "btn btn-primary" %>
+<% end %>
