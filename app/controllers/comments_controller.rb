@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     def view
         val = params[:password]
         if val == "ryan" || val == "shannon" || val == "batjin"
-            @comments = Comment.all
+            @comments = Comment.all.order("created_at DESC")
         else
             redirect_to root_path
             flash[:danger] = "Invalid password"

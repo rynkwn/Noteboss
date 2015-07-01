@@ -1,7 +1,5 @@
-<% counter = 1 %>
 <% @comments.each do |comment| %>
-    Note no. <%= counter %>
-    <% counter += 1%>
+    Note no. <%= comment.id %>
     <br>
     <%= comment.note %>
     <br>
